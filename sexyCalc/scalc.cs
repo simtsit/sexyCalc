@@ -186,6 +186,9 @@ namespace Calculator
 
         }
 
+
+        // When "Equal" button is clicked, the program calculates the result 
+        // and reset the monitor back to zero
         private void buttonEqual_Click(object sender, EventArgs e)
         {
             secondNumber = firstNumber + double.Parse(textboxMonitor.Text);
