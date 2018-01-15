@@ -181,6 +181,8 @@ namespace Calculator
             }
         }
 
+        // This TextBox should be modified in order to accept only digits, 
+        // a single dot (for float values) and the supported numerical telestors.
         private void textboxMonitor_TextChanged(object sender, EventArgs e)
         {
 
