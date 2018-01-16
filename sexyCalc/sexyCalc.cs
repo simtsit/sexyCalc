@@ -35,8 +35,12 @@ namespace Calculator
 
         private void buttonDot_Click(object sender, EventArgs e)
         {
-            // If there is not already a dot...
-            textboxMonitor.Text = textboxMonitor.Text + buttonDot.Text;
+            // If there is not already a dot, add it to the end of whatever
+            // is displayed at monitor.
+            if (!textboxMonitor.Text.Contains("."))
+            {
+                textboxMonitor.Text = textboxMonitor.Text + buttonDot.Text;
+            }
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)

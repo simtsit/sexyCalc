@@ -15,3 +15,4 @@ C:\Users\Komputer\source\repos\sexyCalc\sexyCalc\obj\Debug\sexyCalc.csproj.Gener
 C:\Users\Komputer\source\repos\sexyCalc\sexyCalc\obj\Debug\sexyCalc.csproj.CoreCompileInputs.cache
 C:\Users\Komputer\source\repos\sexyCalc\sexyCalc\obj\Debug\Calculator.exe
 C:\Users\Komputer\source\repos\sexyCalc\sexyCalc\obj\Debug\Calculator.pdb
+C:\Users\Komputer\source\repos\sexyCalc\sexyCalc\obj\Debug\scalc.Properties.Resources.resources
