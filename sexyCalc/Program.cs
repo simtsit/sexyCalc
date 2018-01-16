@@ -16,7 +16,7 @@ namespace sexyCalc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new scalc());
+            Application.Run(new Form1());
         }
     }
 }
