@@ -65,12 +65,12 @@ namespace sexyCalc
             }
         }
 
-        
+
 
         // Numerical Buttons from 1 to 9 have a simple logic:       
         // If Monitor is showing 0, replace it with the pressed number.
         // If not, the digit must be added to the right of current number.
-        
+
         // Button "One" --> 1
         private void buttonOne_Click(object sender, EventArgs e)
         {
@@ -205,7 +205,6 @@ namespace sexyCalc
         // Button "Sum" --> +
         private void buttonSum_Click(object sender, EventArgs e)
         {
-
             firstNumber = firstNumber + double.Parse(textboxMonitor.Text);
             textboxMonitor.Clear();
         }
@@ -215,6 +214,18 @@ namespace sexyCalc
         // and reset the monitor back to zero
         private void buttonEqual_Click(object sender, EventArgs e)
         {
+
+
+            // In calculators, it is common, when you want to sum something to itself (f.e. 5 + 5) 
+            // to type "5 + =" . But in our case, if user clicks an action button (f.e. +) and right 
+            // after the Equal button, then secondNumber never gets value a proper value. The
+            // following code prevents  that from happening by making secondNumber equal to fist 
+            // number.
+            if (textboxMonitor.Text == "")
+            {
+                textboxMonitor.Text = firstNumber.ToString();
+            }
+
             // First, calculate the second number and add it to the first number.
             secondNumber = firstNumber + double.Parse(textboxMonitor.Text);
 
@@ -223,7 +234,7 @@ namespace sexyCalc
             // type of Double, will reset to zero.
             textboxMonitor.Text = secondNumber.ToString();
             firstNumber = 0;
-            
+
         }
     }
 }
