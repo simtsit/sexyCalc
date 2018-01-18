@@ -22,6 +22,12 @@ namespace sexyCalc
         double firstNumber = 0;
         double secondNumber = 0;
 
+        // With this variable we will be keep tracking on what is the action of the user so
+        // program will know what action to perform when user hits "Equal" button. 
+        // This check will also prevent crashes or failures when user press multiple times "+", etc.
+        // Starting with the "Equal" action as it is neutral.
+        String actionPressed = "=";
+
 
 
 
@@ -205,8 +211,15 @@ namespace sexyCalc
         // Button "Sum" --> +
         private void buttonSum_Click(object sender, EventArgs e)
         {
-            firstNumber = firstNumber + double.Parse(textboxMonitor.Text);
-            textboxMonitor.Clear();
+            // If "Sum" button is already pressed, the following code will not be executed.
+            // If it was not pressed, then we set the action to "Sum" and we do the math work.
+            if (actionPressed != "+")
+            {
+                actionPressed = "+";
+                firstNumber = firstNumber + double.Parse(textboxMonitor.Text);
+                textboxMonitor.Clear();
+            }
+            
         }
 
         // Button "Equal" --> =
@@ -215,8 +228,7 @@ namespace sexyCalc
         private void buttonEqual_Click(object sender, EventArgs e)
         {
 
-
-            // In calculators, it is common, when you want to sum something to itself (f.e. 5 + 5) 
+            // In calculators, it is common, when you want to sum something to itself (f.e. 5 + 5 =) 
             // to type "5 + =" . But in our case, if user clicks an action button (f.e. +) and right 
             // after the Equal button, then secondNumber never gets value a proper value. The
             // following code prevents  that from happening by making secondNumber equal to fist 
@@ -235,6 +247,8 @@ namespace sexyCalc
             textboxMonitor.Text = secondNumber.ToString();
             firstNumber = 0;
 
+            // Return actionPressed to "Equal".
+            actionPressed = "=";
         }
     }
 }

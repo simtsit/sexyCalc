@@ -8,3 +8,13 @@ C:\Users\symeon.tsitoglou\source\repos\scalc\sexyCalc\obj\Debug\sexyCalc.csproj.
 C:\Users\symeon.tsitoglou\source\repos\scalc\sexyCalc\obj\Debug\sexyCalc.exe
 C:\Users\symeon.tsitoglou\source\repos\scalc\sexyCalc\obj\Debug\sexyCalc.pdb
 C:\Users\symeon.tsitoglou\source\repos\scalc\sexyCalc\obj\Debug\sexyCalc.csprojResolveAssemblyReference.cache
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\bin\Debug\sexyCalc.exe.config
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\bin\Debug\sexyCalc.exe
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\bin\Debug\sexyCalc.pdb
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.csprojResolveAssemblyReference.cache
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.Form1.resources
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.Properties.Resources.resources
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.csproj.GenerateResource.Cache
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.csproj.CoreCompileInputs.cache
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.exe
+C:\Users\symeon.tsitoglou\source\repos\sexycalc\sexyCalc\obj\Debug\sexyCalc.pdb
