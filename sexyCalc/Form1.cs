@@ -43,9 +43,19 @@ namespace sexyCalc
             textboxMonitor.Text = "0";
         }
 
+        // Button "Divide" --> /
         private void button2_Click(object sender, EventArgs e)
         {
+            // If "Divide" button is already pressed, the following code will not be executed.
+            // If it was not pressed, then we set the action to "Divide".
+            // The check for dividing with zero will be once user hits "Equal"
+            if (actionPressed != "/")
+            {
+                actionPressed = "/";
+                firstNumber = firstNumber + float.Parse(textboxMonitor.Text);
+                textboxMonitor.Clear();
 
+            }
         }
 
         // Button "Substract" --> -
@@ -288,9 +298,10 @@ namespace sexyCalc
 
                     // Return actionPressed to "Equal".
                     actionPressed = "=";
+
                     break;
                 case "x":
-                    // First, calculate the second number and multiply it with the first number.
+                    // First, calculate the second number and then multiply it with the first number.
                     secondNumber = firstNumber * float.Parse(textboxMonitor.Text);
 
                     // Then, the result will become the new first number for the upcoming
@@ -301,6 +312,26 @@ namespace sexyCalc
 
                     // Return actionPressed to "Equal".
                     actionPressed = "=";
+                    break;
+                case "/":
+                    // Prevent dividing with zero.
+                    if (textboxMonitor.Text == "0")
+                    {
+                        textboxMonitor.Text = "1";
+                    }
+
+                    // First, calculate the second number and then divide first number with second number.
+                    secondNumber = firstNumber / float.Parse(textboxMonitor.Text);
+
+                    // Then, the result will become the new first number for the upcoming
+                    // calculations as a type of String. Right after, firstNumber, which is 
+                    // type of Double, will reset to zero.
+                    textboxMonitor.Text = secondNumber.ToString();
+                    firstNumber = 0;
+
+                    // Return actionPressed to "Equal".
+                    actionPressed = "=";
+
                     break;
             }
         }
