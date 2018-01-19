@@ -48,9 +48,32 @@ namespace sexyCalc
 
         }
 
+        // Button "Substract" --> -
+        private void buttonSubstruct_Click(object sender, EventArgs e)
+        {
+            // If "Substract" button is already pressed, the following code will not be executed.
+            // If it was not pressed, then we set the action to "Substract" and we do the math work.
+            if (actionPressed != "-")
+            {
+                actionPressed = "-";
+                firstNumber = firstNumber + float.Parse(textboxMonitor.Text);
+                textboxMonitor.Clear();
+            }
+
+        }
+
+
+        // Button "Multiply" --> x
         private void button3_Click(object sender, EventArgs e)
         {
-
+            // If "Multiply" button is already pressed, the following code will not be executed.
+            // If it was not pressed, then we set the action to "Substract" and we do the math work.
+            if (actionPressed != "x")
+            {
+                actionPressed = "x";
+                firstNumber = firstNumber + float.Parse(textboxMonitor.Text);
+                textboxMonitor.Clear();
+            }
         }
 
 
@@ -202,9 +225,9 @@ namespace sexyCalc
             // If there is not already a dot, add it to the end of whatever is shown
             // at monitor. This check will prevent having numbers lie ".012", "0.1.1"
             // and of course "234....". 
-            if ((textboxMonitor.Text.Contains(".") == false) && (textboxMonitor.Text != "0"))
+            if ((textboxMonitor.Text.Contains(",") == false) && (textboxMonitor.Text != "0"))
             {
-                textboxMonitor.Text = textboxMonitor.Text + buttonDot.Text;
+                textboxMonitor.Text = textboxMonitor.Text + ","; // buttonDot.Text;
             }
         }
 
@@ -254,8 +277,21 @@ namespace sexyCalc
                     actionPressed = "=";
                     break;
                 case "-":
-                    // First, calculate the second number and add it to the first number.
+                    // First, calculate the second number and substract it from the first number.
                     secondNumber = firstNumber - float.Parse(textboxMonitor.Text);
+
+                    // Then, the result will become the new first number for the upcoming
+                    // calculations as a type of String. Right after, firstNumber, which is 
+                    // type of Double, will reset to zero.
+                    textboxMonitor.Text = secondNumber.ToString();
+                    firstNumber = 0;
+
+                    // Return actionPressed to "Equal".
+                    actionPressed = "=";
+                    break;
+                case "x":
+                    // First, calculate the second number and multiply it with the first number.
+                    secondNumber = firstNumber * float.Parse(textboxMonitor.Text);
 
                     // Then, the result will become the new first number for the upcoming
                     // calculations as a type of String. Right after, firstNumber, which is 
@@ -268,18 +304,10 @@ namespace sexyCalc
                     break;
             }
         }
+    
 
-        // Button "Substract" --> -
-        private void buttonSubstruct_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            // If "Substract" button is already pressed, the following code will not be executed.
-            // If it was not pressed, then we set the action to "Sum" and we do the math work.
-            if (actionPressed != "-")
-            {
-                actionPressed = "-";
-                firstNumber = firstNumber + float.Parse(textboxMonitor.Text);
-                textboxMonitor.Clear();
-            }
 
         }
     }
