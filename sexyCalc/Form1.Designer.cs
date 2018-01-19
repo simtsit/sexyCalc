@@ -96,6 +96,7 @@
             this.buttonSubstruct.TabIndex = 4;
             this.buttonSubstruct.Text = "-";
             this.buttonSubstruct.UseVisualStyleBackColor = true;
+            this.buttonSubstruct.Click += new System.EventHandler(this.buttonSubstruct_Click);
             // 
             // buttonSeven
             // 

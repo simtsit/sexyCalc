@@ -19,8 +19,8 @@ namespace sexyCalc
         }
 
 
-        double firstNumber = 0;
-        double secondNumber = 0;
+        float firstNumber = 0;
+        float secondNumber = 0;
 
         // With this variable we will be keep tracking on what is the action of the user so
         // program will know what action to perform when user hits "Equal" button. 
@@ -216,7 +216,7 @@ namespace sexyCalc
             if (actionPressed != "+")
             {
                 actionPressed = "+";
-                firstNumber = firstNumber + double.Parse(textboxMonitor.Text);
+                firstNumber = firstNumber + float.Parse(textboxMonitor.Text);
                 textboxMonitor.Clear();
             }
             
@@ -238,17 +238,49 @@ namespace sexyCalc
                 textboxMonitor.Text = firstNumber.ToString();
             }
 
-            // First, calculate the second number and add it to the first number.
-            secondNumber = firstNumber + double.Parse(textboxMonitor.Text);
+            switch (actionPressed)
+            {
+                case "+":
+                    // First, calculate the second number and add it to the first number.
+                    secondNumber = firstNumber + float.Parse(textboxMonitor.Text);
 
-            // Then, the result will become the new first number for the upcoming
-            // calculations as a type of String. Right after, firstNumber, which is 
-            // type of Double, will reset to zero.
-            textboxMonitor.Text = secondNumber.ToString();
-            firstNumber = 0;
+                    // Then, the result will become the new first number for the upcoming
+                    // calculations as a type of String. Right after, firstNumber, which is 
+                    // type of Double, will reset to zero.
+                    textboxMonitor.Text = secondNumber.ToString();
+                    firstNumber = 0;
 
-            // Return actionPressed to "Equal".
-            actionPressed = "=";
+                    // Return actionPressed to "Equal".
+                    actionPressed = "=";
+                    break;
+                case "-":
+                    // First, calculate the second number and add it to the first number.
+                    secondNumber = firstNumber - float.Parse(textboxMonitor.Text);
+
+                    // Then, the result will become the new first number for the upcoming
+                    // calculations as a type of String. Right after, firstNumber, which is 
+                    // type of Double, will reset to zero.
+                    textboxMonitor.Text = secondNumber.ToString();
+                    firstNumber = 0;
+
+                    // Return actionPressed to "Equal".
+                    actionPressed = "=";
+                    break;
+            }
+        }
+
+        // Button "Substract" --> -
+        private void buttonSubstruct_Click(object sender, EventArgs e)
+        {
+            // If "Substract" button is already pressed, the following code will not be executed.
+            // If it was not pressed, then we set the action to "Sum" and we do the math work.
+            if (actionPressed != "-")
+            {
+                actionPressed = "-";
+                firstNumber = firstNumber + float.Parse(textboxMonitor.Text);
+                textboxMonitor.Clear();
+            }
+
         }
     }
 }
