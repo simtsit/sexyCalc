@@ -46,11 +46,15 @@
             this.buttonEqual = new System.Windows.Forms.Button();
             this.buttonZero = new System.Windows.Forms.Button();
             this.buttonDot = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textboxMonitor
             // 
-            this.textboxMonitor.Location = new System.Drawing.Point(12, 12);
+            this.textboxMonitor.Location = new System.Drawing.Point(12, 40);
             this.textboxMonitor.Name = "textboxMonitor";
             this.textboxMonitor.Size = new System.Drawing.Size(218, 20);
             this.textboxMonitor.TabIndex = 0;
@@ -60,7 +64,7 @@
             // 
             // buttonClean
             // 
-            this.buttonClean.Location = new System.Drawing.Point(14, 43);
+            this.buttonClean.Location = new System.Drawing.Point(14, 71);
             this.buttonClean.Name = "buttonClean";
             this.buttonClean.Size = new System.Drawing.Size(49, 41);
             this.buttonClean.TabIndex = 1;
@@ -70,7 +74,7 @@
             // 
             // buttonDivide
             // 
-            this.buttonDivide.Location = new System.Drawing.Point(69, 43);
+            this.buttonDivide.Location = new System.Drawing.Point(69, 71);
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(49, 41);
             this.buttonDivide.TabIndex = 2;
@@ -80,7 +84,7 @@
             // 
             // buttonMultiply
             // 
-            this.buttonMultiply.Location = new System.Drawing.Point(125, 43);
+            this.buttonMultiply.Location = new System.Drawing.Point(125, 71);
             this.buttonMultiply.Name = "buttonMultiply";
             this.buttonMultiply.Size = new System.Drawing.Size(49, 41);
             this.buttonMultiply.TabIndex = 3;
@@ -90,7 +94,7 @@
             // 
             // buttonSubstruct
             // 
-            this.buttonSubstruct.Location = new System.Drawing.Point(181, 43);
+            this.buttonSubstruct.Location = new System.Drawing.Point(181, 71);
             this.buttonSubstruct.Name = "buttonSubstruct";
             this.buttonSubstruct.Size = new System.Drawing.Size(49, 41);
             this.buttonSubstruct.TabIndex = 4;
@@ -100,7 +104,7 @@
             // 
             // buttonSeven
             // 
-            this.buttonSeven.Location = new System.Drawing.Point(13, 90);
+            this.buttonSeven.Location = new System.Drawing.Point(13, 118);
             this.buttonSeven.Name = "buttonSeven";
             this.buttonSeven.Size = new System.Drawing.Size(49, 41);
             this.buttonSeven.TabIndex = 5;
@@ -110,7 +114,7 @@
             // 
             // buttonEight
             // 
-            this.buttonEight.Location = new System.Drawing.Point(69, 90);
+            this.buttonEight.Location = new System.Drawing.Point(69, 118);
             this.buttonEight.Name = "buttonEight";
             this.buttonEight.Size = new System.Drawing.Size(49, 41);
             this.buttonEight.TabIndex = 6;
@@ -120,7 +124,7 @@
             // 
             // buttonNine
             // 
-            this.buttonNine.Location = new System.Drawing.Point(125, 90);
+            this.buttonNine.Location = new System.Drawing.Point(125, 118);
             this.buttonNine.Name = "buttonNine";
             this.buttonNine.Size = new System.Drawing.Size(49, 41);
             this.buttonNine.TabIndex = 7;
@@ -130,7 +134,7 @@
             // 
             // buttonSum
             // 
-            this.buttonSum.Location = new System.Drawing.Point(181, 90);
+            this.buttonSum.Location = new System.Drawing.Point(181, 118);
             this.buttonSum.Name = "buttonSum";
             this.buttonSum.Size = new System.Drawing.Size(49, 88);
             this.buttonSum.TabIndex = 8;
@@ -140,7 +144,7 @@
             // 
             // buttonFour
             // 
-            this.buttonFour.Location = new System.Drawing.Point(13, 137);
+            this.buttonFour.Location = new System.Drawing.Point(13, 165);
             this.buttonFour.Name = "buttonFour";
             this.buttonFour.Size = new System.Drawing.Size(50, 41);
             this.buttonFour.TabIndex = 9;
@@ -150,7 +154,7 @@
             // 
             // buttonFive
             // 
-            this.buttonFive.Location = new System.Drawing.Point(69, 137);
+            this.buttonFive.Location = new System.Drawing.Point(69, 165);
             this.buttonFive.Name = "buttonFive";
             this.buttonFive.Size = new System.Drawing.Size(49, 41);
             this.buttonFive.TabIndex = 10;
@@ -160,7 +164,7 @@
             // 
             // buttonSix
             // 
-            this.buttonSix.Location = new System.Drawing.Point(125, 137);
+            this.buttonSix.Location = new System.Drawing.Point(125, 165);
             this.buttonSix.Name = "buttonSix";
             this.buttonSix.Size = new System.Drawing.Size(49, 41);
             this.buttonSix.TabIndex = 11;
@@ -170,7 +174,7 @@
             // 
             // buttonOne
             // 
-            this.buttonOne.Location = new System.Drawing.Point(13, 184);
+            this.buttonOne.Location = new System.Drawing.Point(13, 212);
             this.buttonOne.Name = "buttonOne";
             this.buttonOne.Size = new System.Drawing.Size(50, 41);
             this.buttonOne.TabIndex = 12;
@@ -180,7 +184,7 @@
             // 
             // buttonTwo
             // 
-            this.buttonTwo.Location = new System.Drawing.Point(69, 184);
+            this.buttonTwo.Location = new System.Drawing.Point(69, 212);
             this.buttonTwo.Name = "buttonTwo";
             this.buttonTwo.Size = new System.Drawing.Size(49, 41);
             this.buttonTwo.TabIndex = 13;
@@ -190,7 +194,7 @@
             // 
             // buttonThree
             // 
-            this.buttonThree.Location = new System.Drawing.Point(125, 184);
+            this.buttonThree.Location = new System.Drawing.Point(125, 212);
             this.buttonThree.Name = "buttonThree";
             this.buttonThree.Size = new System.Drawing.Size(49, 41);
             this.buttonThree.TabIndex = 14;
@@ -200,7 +204,7 @@
             // 
             // buttonEqual
             // 
-            this.buttonEqual.Location = new System.Drawing.Point(181, 184);
+            this.buttonEqual.Location = new System.Drawing.Point(181, 212);
             this.buttonEqual.Name = "buttonEqual";
             this.buttonEqual.Size = new System.Drawing.Size(49, 87);
             this.buttonEqual.TabIndex = 15;
@@ -210,7 +214,7 @@
             // 
             // buttonZero
             // 
-            this.buttonZero.Location = new System.Drawing.Point(13, 231);
+            this.buttonZero.Location = new System.Drawing.Point(13, 259);
             this.buttonZero.Name = "buttonZero";
             this.buttonZero.Size = new System.Drawing.Size(105, 40);
             this.buttonZero.TabIndex = 16;
@@ -220,7 +224,7 @@
             // 
             // buttonDot
             // 
-            this.buttonDot.Location = new System.Drawing.Point(125, 231);
+            this.buttonDot.Location = new System.Drawing.Point(125, 259);
             this.buttonDot.Name = "buttonDot";
             this.buttonDot.Size = new System.Drawing.Size(49, 40);
             this.buttonDot.TabIndex = 17;
@@ -228,11 +232,34 @@
             this.buttonDot.UseVisualStyleBackColor = true;
             this.buttonDot.Click += new System.EventHandler(this.buttonDot_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(241, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.clearToolStripMenuItem.Text = "Clear";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 280);
+            this.ClientSize = new System.Drawing.Size(241, 325);
             this.Controls.Add(this.buttonDot);
             this.Controls.Add(this.buttonZero);
             this.Controls.Add(this.buttonEqual);
@@ -251,9 +278,13 @@
             this.Controls.Add(this.buttonDivide);
             this.Controls.Add(this.buttonClean);
             this.Controls.Add(this.textboxMonitor);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +310,9 @@
         private System.Windows.Forms.Button buttonEqual;
         private System.Windows.Forms.Button buttonZero;
         private System.Windows.Forms.Button buttonDot;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
     }
 }
 
