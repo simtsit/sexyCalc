@@ -27,6 +27,7 @@ namespace sexyCalc
         // This check will also prevent crashes or failures when user press multiple times "+", etc.
         // Starting with the "Equal" action as it is neutral.
         String actionPressed = "=";
+        String calculatorStatus = "Ready";
 
 
 
@@ -98,10 +99,15 @@ namespace sexyCalc
             // If monitor is not displaying a zero already, add the zero to the right
             // of whatever monitor shows. This will work fine when we want to type 
             // number 1000 but it will prevent from typing 0001
-            if (textboxMonitor.Text != "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
+            {
+                textboxMonitor.Text = "0";
+            }
+            else
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonZero.Text;
             }
+            calculatorStatus = "Ready";
         }
 
 
@@ -113,7 +119,7 @@ namespace sexyCalc
         // Button "One" --> 1
         private void buttonOne_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "1";
             }
@@ -121,12 +127,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonOne.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Two" --> 2
         private void buttonTwo_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "2";
             }
@@ -134,12 +141,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonTwo.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Three" --> 3
         private void buttonThree_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "3";
             }
@@ -147,12 +155,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonThree.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Four" --> 4
         private void buttonFour_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "4";
             }
@@ -160,12 +169,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonFour.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Five" --> 5
         private void buttonFive_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "5";
             }
@@ -173,12 +183,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonFive.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Six" --> 6
         private void buttonSix_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "6";
             }
@@ -186,12 +197,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonSix.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Seven" --> 7
         private void buttonSeven_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "7";
             }
@@ -199,13 +211,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonSeven.Text;
             }
-
+            calculatorStatus = "Ready";
         }
 
         // Button "Eight" --> 8
         private void buttonEight_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "8";
             }
@@ -213,12 +225,13 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonEight.Text;
             }
+            calculatorStatus = "Ready";
         }
 
         // Button "Nine" --> 9
         private void buttonNine_Click(object sender, EventArgs e)
         {
-            if (textboxMonitor.Text == "0")
+            if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {
                 textboxMonitor.Text = "9";
             }
@@ -226,6 +239,7 @@ namespace sexyCalc
             {
                 textboxMonitor.Text = textboxMonitor.Text + buttonNine.Text;
             }
+            calculatorStatus = "Ready";
         }
 
 
@@ -334,6 +348,7 @@ namespace sexyCalc
 
                     break;
             }
+            calculatorStatus = "Finished";
         }
     
 
