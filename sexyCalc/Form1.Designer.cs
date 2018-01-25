@@ -47,8 +47,8 @@
             this.buttonZero = new System.Windows.Forms.Button();
             this.buttonDot = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@
             // 
             this.textboxMonitor.Location = new System.Drawing.Point(12, 40);
             this.textboxMonitor.Name = "textboxMonitor";
+            this.textboxMonitor.ReadOnly = true;
             this.textboxMonitor.Size = new System.Drawing.Size(218, 20);
             this.textboxMonitor.TabIndex = 0;
             this.textboxMonitor.Text = "0";
@@ -243,17 +244,17 @@
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.clearToolStripMenuItem.Text = "Clear";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // Form1
             // 
