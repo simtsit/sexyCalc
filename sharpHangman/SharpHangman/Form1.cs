@@ -17,6 +17,14 @@ namespace SharpHangman
             InitializeComponent();
         }
 
+
+        string[] wordPool = { "ABSTRACT", "DEFINITION", "ORANGE", "VELOCITY", "ILLUSION" };
+
+        string secretWord = wordPool[0];
+
+        //MessageBox.Show(secretWord);
+
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -28,6 +36,11 @@ namespace SharpHangman
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
