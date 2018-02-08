@@ -22,6 +22,9 @@ namespace SharpHangman
 
         string secretWord = wordPool[0];
 
+        int remainingTries = 3;
+
+
         //MessageBox.Show(secretWord);
 
 
@@ -41,6 +44,16 @@ namespace SharpHangman
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
