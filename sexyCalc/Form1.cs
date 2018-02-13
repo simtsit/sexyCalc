@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace sexyCalc
 {
     public partial class Form1 : Form
@@ -16,8 +17,8 @@ namespace sexyCalc
         public Form1()
         {
             InitializeComponent();
-        }
 
+        }
 
         float firstNumber = 0;
         float secondNumber = 0;
@@ -109,15 +110,21 @@ namespace sexyCalc
             }
             calculatorStatus = "Ready";
         }
+        
 
+        /*
+        if (e.KeyData == Keys.A)
+        {
+            MessageBox.Show("Enter Key Pressed ");
+        }
+        */
 
+    // Numerical Buttons from 1 to 9 have a simple logic:       
+    // If Monitor is showing 0, replace it with the pressed number.
+    // If not, the digit must be added to the right of current number.
 
-        // Numerical Buttons from 1 to 9 have a simple logic:       
-        // If Monitor is showing 0, replace it with the pressed number.
-        // If not, the digit must be added to the right of current number.
-
-        // Button "One" --> 1
-        private void buttonOne_Click(object sender, EventArgs e)
+    // Button "One" --> 1
+    private void buttonOne_Click(object sender, EventArgs e)
         {
             if (textboxMonitor.Text == "0" || calculatorStatus == "Finished")
             {

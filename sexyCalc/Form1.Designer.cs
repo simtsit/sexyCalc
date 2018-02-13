@@ -181,7 +181,6 @@
             this.buttonOne.TabIndex = 12;
             this.buttonOne.Text = "1";
             this.buttonOne.UseVisualStyleBackColor = true;
-            this.buttonOne.Click += new System.EventHandler(this.buttonOne_Click);
             // 
             // buttonTwo
             // 
