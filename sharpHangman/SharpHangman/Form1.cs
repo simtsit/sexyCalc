@@ -20,7 +20,7 @@ namespace SharpHangman
 
         string[] wordPool = { "ABSTRACT", "DEFINITION", "ORANGE", "VELOCITY", "ILLUSION" };
 
-        string secretWord = wordPool[0];
+        string secretWord = "ABSTRACT"; // wordPool[0];
 
         int remainingTries = 3;
 
@@ -30,6 +30,14 @@ namespace SharpHangman
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /* Game Logic:
+            When a key is pressed, the program first will deactivate the button so it can't be pressed again.
+            Then the program will search to find if this letter belongs to the word.
+            If yes it will reveal in every case the letter appears.
+            If not, it will remove 1 try from user's tries pool.
+            It will also change the image of the hangman.
+            This check will occur in all buttons.
+            */
 
         }
 
@@ -56,6 +64,11 @@ namespace SharpHangman
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
