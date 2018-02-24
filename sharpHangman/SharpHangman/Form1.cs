@@ -20,13 +20,28 @@ namespace SharpHangman
 
         string[] wordPool = { "ABSTRACT", "DEFINITION", "ORANGE", "VELOCITY", "ILLUSION" };
 
+        /* This array will be holding all keys as a boolean value, with false as a starting value.
+        If the user presses one letter button, the value for this letter will turn to true. In that way,
+        a user can't choose two times the same latter.  */
+        bool[] Alphabet = new bool[26];
+
+
+
         string secretWord = "ABSTRACT"; // wordPool[0];
 
         int remainingTries = 3;
 
+        /* Giving starting value to all "letter". */
+        for (int i=0; i< 5; i++){
+            
+            // Alphabet[i] = false;
+            Console.WriteLine("ok");
+
+        }
+
+        // Console.WriteLine(Alphabet[0].ToString());
 
         //MessageBox.Show(secretWord);
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,6 +84,10 @@ namespace SharpHangman
         private void label3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
